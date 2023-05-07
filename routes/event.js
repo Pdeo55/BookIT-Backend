@@ -1,10 +1,10 @@
 const express = require("express");
-const {addEvent} = require('../controllers/Event/Add');
-const{getEvent}= require("../controllers/Event/Get")
+const {addEvent} = require('../controllers/Event.js/Add');
+// const{login}= require("../controllers/Event.js/login")
 const EventRouter = express.Router();
 
 EventRouter.post("/addEvent",addEvent);
-EventRouter.get("/getEvent", getEvent);
+// EventRouter.post("/register", addEvent);
 
 
 
