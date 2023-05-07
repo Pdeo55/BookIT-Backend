@@ -14,7 +14,11 @@ const UserSchema = new mongoose.Schema(
     enum:[roles.Admin,roles.Organizer,roles.User],
     default:roles.User,
    },
-   
+   Bank_Acc_No:Number,
+   IFSC:String,
+   PAN_No:String,
+   DOB:Date,
+   Address:String,
  
   },
   { timestamps: true }
