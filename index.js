@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const UserRouter = require("./routes/user");
+const EventRouter = require("./routes/event");
+
 
 const PORT = process.env.PORT || 8000;    
 const app = express();
@@ -23,6 +25,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use("/api/user", UserRouter);
+app.use("/api/event", EventRouter);
 
 
 mongoose
