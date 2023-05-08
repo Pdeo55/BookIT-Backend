@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-
 const EventSchema = new mongoose.Schema(
   {
    EventName:String,
@@ -9,8 +8,8 @@ const EventSchema = new mongoose.Schema(
    Category:String,
    fee:Number,
    OrganizationID:String,
-   
- 
+   Banner :String,
+
   },
   { timestamps: true }
 );
