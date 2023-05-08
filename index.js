@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const UserRouter = require("./routes/user");
 const EventRouter = require("./routes/event");
+const BookRouter = require("./routes/book");
 
 
 const PORT = process.env.PORT || 8000;    
@@ -26,6 +27,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use("/api/user", UserRouter);
 app.use("/api/event", EventRouter);
+app.use("/api/booking", BookRouter);
 
 
 mongoose
