@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const fileUpload = require("express-fileupload");
 const UserRouter = require("./routes/user");
 const EventRouter = require("./routes/event");
 const BookRouter = require("./routes/book");
@@ -19,6 +20,12 @@ app.use(
       preflightContinue: false,
       optionsSuccessStatus: 204,
       credentials: true,
+    })
+  );
+  app.use(
+    fileUpload({
+      useTempFiles: true,
+      tempFileDir: "/tmp/",
     })
   );
 
