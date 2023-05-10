@@ -1,6 +1,6 @@
 const express = require("express");
 
-const {checkout} = require('../controllers/book');
+const {checkout,paymentVerification } = require('../controllers/book');
 // const{getbook,getbookbyid}= require("../controllers/book/Get")
 
 
@@ -9,7 +9,7 @@ const {checkout} = require('../controllers/book');
 const BookRouter = express.Router();
 
 BookRouter.post("/checkout",checkout);
-// BookRouter.post("/getbookbyid",getbookbyid);
+BookRouter.post("/paymentVerification ",paymentVerification );
 // BookRouter.get("/getbook", getbook);
 
 module.exports = BookRouter ;
