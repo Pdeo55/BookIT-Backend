@@ -12,7 +12,7 @@ const getEvent = async (req, res) => {
 };
 
 const getEventbyid = async (req, res) => {
-     const id=req.body.id 
+     const id=req.params.id 
   try {
     const getevent = await Event.findById(id);
     res.status(200).json(getevent);
