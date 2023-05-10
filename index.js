@@ -35,6 +35,9 @@ app.use(cors());
 app.use("/api/user", UserRouter);
 app.use("/api/event", EventRouter);
 app.use("/api/booking", BookRouter);
+app.get("/api/getkey", (req, res) =>
+  res.status(200).json({ key: process.env.RAZORPAY_API_KEY })
+);
 
 
 mongoose
