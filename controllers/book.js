@@ -1,5 +1,5 @@
 const rzp = require("../middleware/razorpay");
-// import crypto from "crypto";
+const crypto = require("crypto");
 const book = require("../models/book.js");
 
 const checkout = async (req, res) => {
