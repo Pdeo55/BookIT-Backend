@@ -50,8 +50,8 @@ const paymentVerification = async (req, res) => {
   //     razorpay_payment_id,
   //     razorpay_signature,
   //   });
-
-  if (razorpay_payment_id) {
+try {
+  if (razorpay_payment_id ) {
     //   // Database comes here
 
     await book.create({
@@ -70,6 +70,10 @@ const paymentVerification = async (req, res) => {
       "Booking Not done,Something Error"
     );
   }
+} catch (error) {
+  res.status(400).json({ error: error.message });
+}
+
 };
 
 module.exports = { checkout, paymentVerification };
